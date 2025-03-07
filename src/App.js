@@ -14,7 +14,7 @@ function App() {
 
   useEffect(() => {
     const initWeb3 = async () => {
-      if (window.ethereum) {
+      if (window.ethereum)  {
         try {
           const web3Instance = new Web3(window.ethereum);
           await window.ethereum.request({ method: "eth_requestAccounts" });
