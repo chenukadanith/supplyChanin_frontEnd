@@ -1,7 +1,7 @@
 import Web3 from "web3";
 import ContractABI from "./contracts/PharmaceuticalSupplyChain.json";
 
-const contractAddress = "0xEdd6281fD1F3F272854A28b0c1ccDE906eAD7E66"; // Your deployed contract address
+const contractAddress = "0xbD9e9FA4Aff37f1ecA459CB7adB599EDf2cEd727"; // Your deployed contract address
 
 let web3;
 let contract;
