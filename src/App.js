@@ -9,7 +9,7 @@ import RetailerView from "./components/RetailerView"; // Assuming RetailerView i
 import UnauthorizedView from "./components/UnauthorizedView"; // Import UnauthorizedView
 import UserView from "./components/UserView"; // Import UserView
 
-const contractAddress = "0xC487759d02C1dade159365A9F25eC5D75fb3F0df"; // Replace with your contract address
+const contractAddress = "0x9D816b190a2b10811d401CCeb32C3310f6c4abe4"; // Replace with your contract address
 const adminAddress = "0xcEDBAaa935F4eBe945dfb10a2380aD4eE604137F"; // Admin address
 
 function App() {
@@ -96,11 +96,11 @@ function App() {
           ) : (
             <div>
               {/* Conditionally render based on the user role */}
-              {userRole === 0 && <ManufacturerView web3={web3} contract={contract} account={account} />}
-              {userRole === 1 && <DistributorView web3={web3} contract={contract} account={account} />}
-              {userRole === 2 && <RetailerView web3={web3} contract={contract} account={account} />}
+              {userRole === 1 && <ManufacturerView web3={web3} contract={contract} account={account} />}
+              {userRole === 2 && <DistributorView web3={web3} contract={contract} account={account} />}
+              {userRole === 3 && <RetailerView web3={web3} contract={contract} account={account} />}
               {/* If the role is not Manufacturer, Distributor, or Retailer, show UserView */}
-              {userRole !== 0 && userRole !== 1 && userRole !== 2 && <UserView />}
+              {userRole !== 1 && userRole !== 2 && userRole !== 3 && <UserView />}
             </div>
           )}
         </div>

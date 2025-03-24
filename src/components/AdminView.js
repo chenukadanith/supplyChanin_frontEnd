@@ -14,7 +14,8 @@ const AdminView = ({ web3, contract, account }) => {
   setLoading(true);
   try {
     // Convert role to enum value
-    const roleValue = role === "Manufacturer" ? 0 : role === "Distributor" ? 1 : 2; // Role starts from 0
+    const roleValue = role === "Manufacturer" ? 1 : role === "Distributor" ? 2 : 3;
+    console.log(roleValue); // Role starts from 0
 
     // Ensure contract is loaded
     if (!contract) {
